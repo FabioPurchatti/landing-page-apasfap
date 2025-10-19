@@ -1,0 +1,21 @@
+/* Garante que o contêiner do logo tenha apenas 50 pixels de largura */
+nav img{
+    width: 40px; 
+    display: inline-block; 
+    border-radius: 50px;
+}
+
+.titulos{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.botao{
+    width: 100px;
+    height: 80px;
+}
+
+.textos, .botao-imagem{
+    flex: 1;
+}
