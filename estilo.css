@@ -19,3 +19,11 @@ nav img{
 .textos, .botao-imagem{
     flex: 1;
 }
+
+.menu-lista ul {
+    display: inline-flex;
+}
+
+form input {
+    display: table-row;
+}
