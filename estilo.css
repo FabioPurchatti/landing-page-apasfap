@@ -25,5 +25,8 @@ nav img{
 }
 
 form input {
-    display: table-row;
+    display: block;
+}
+form button{
+    display: block;
 }
