@@ -250,13 +250,15 @@ a {
 
 /*Bloco de como ajudar*/
 #como-ajudar {
-  display: flex;
+  display:flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   background-color: #faf4e8;
   padding: 60px 6%;
   gap: 48px;
   position: relative;
+  margin-left: 170px;
 }
 
 .titulo-tampinhas {
@@ -301,8 +303,8 @@ a {
 /* Imagem da garrafa sobreposta */
 .img-garrafa {
   position: absolute;
-  right: 6%;
-  top: 40%;
+  right: 43%;
+  top: 36%;
   bottom: -25px;
   z-index: 3;
   transform: translateY(-50%);
@@ -310,8 +312,9 @@ a {
 }
 
 .img-garrafa img[alt="Imagem garrafa com tampinhas"] {
-  width: 400px;
+  width: 450px;
   height: auto;
+    
   transform: translateY(-50px);
 }
 
@@ -378,7 +381,7 @@ a {
   justify-content: center;
   text-align: center;
   padding: 25px 15px;
-  gap: 15px;
+  gap: 100px;
   transition: transform 0.3s ease-in-out;
 }
 
