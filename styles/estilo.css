@@ -161,10 +161,15 @@ a {
 
 /*Inicio seu gesto vira cuidado*/
 
+.texto2 {
+  background-color: #faf4e8;
+  padding: 80px 20px 20px;
+  text-align: center;
+}
+
 .texto2 h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: center;
@@ -182,6 +187,14 @@ a {
   text-align: center;
 }
 
+.menu-lista {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: -80px;
+}
+
 .menu-lista ul {
   display: flex;
   width: 90%;
@@ -190,21 +203,595 @@ a {
   justify-content: space-around;
 }
 
-.menu-lista {
-  background-color: #f9feff;
-  border-radius: 50px;
-  padding: 60px;
-  width: 80%;
+.menu-lista .lista {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 30px;
+  border: 2px dashed #f16c29;
+  padding: 60px 40px;
+  max-width: 900px;
+  margin: 30px auto;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.menu-lista .lista img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.menu-lista .lista p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #b74426;
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+.menu-lista .lista li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-lista .lista div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Bloco de como ajudar*/
+#como-ajudar {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #faf4e8;
+  padding: 100px 6%;
+  gap: 48px;
+  position: relative;
+  margin-left: 170px;
+}
+
+.titulo-tampinhas {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #f16c29;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: -40px;
+  width: 100%;
+}
+
+.tampinhas {
+  background: #fff;
+  border: 2px dashed #f16c29;
+  border-radius: 32px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 78%;
   max-width: 1000px;
-  margin: 50px auto;
+  padding: 30px 30px 30px;
+  z-index: 1;
+}
+
+.tampinhas ul {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+
+.tampinhas li {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.55rem;
+  color: #b74426;
+  line-height: 2;
+}
+
+.tampinhas li::marker {
+  color: #f16c29;
+}
+
+/* Imagem da garrafa sobreposta */
+.img-garrafa {
+  position: absolute;
+  right: 35%;
+  top: 29%;
+  bottom: -25px;
+  z-index: 3;
+  transform: translateY(-50%);
+  z-index: 2;
+  padding: 100px 6%;
+}
+
+.img-garrafa img[alt="Imagem garrafa com tampinhas"] {
+  width: 450px;
+  height: auto;
+    
+  transform: translateY(-50px);
+}
+
+/* Pata decorativa */
+.img-garrafa img[src*="Pata"] {
+  position: absolute;
+  bottom: -25px;
+  left: -25px;
+  width: 50px;
+  height: auto;
+  pointer-events: none;
+}
+
+/* Pontos de coleta */
+
+#ponto-coleta {
+  text-align: center;
+  background-color: #FAF4E8;
+  padding: 40px 0 20px; 
+  margin-top: -40px; 
+}
+
+#ponto-coleta h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: #F16C29;
+  margin-bottom: 10px;
+}
+
+#ponto-coleta p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2E2E2E;
+  margin-bottom: 40px;
+}
+
+
+/* Container dos blocos (menu-lista2) */
+.menu-lista2 ul {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 35px; 
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+/* Cada bloco individual */
+.menu-lista2 ul li {
+  background-color: #FEB84C;
+  border: 2px dashed #B74426;
+  border-radius: 35px;
+  width: 190px; 
+  height: 300px; 
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px 15px;
+  gap: 100px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de hover */
+.menu-lista2 ul li:hover {
+  transform: translateY(-5px);
+}
+
+/* Ícones centralizados */
+.menu-lista2 ul li img {
+  width: 100px; 
+  height: auto;
+  display: block;
+  margin:0 auto 15px auto;
+
+  object-fit: contain;
+
+}
+
+/* Texto interno */
+.menu-lista2 ul li p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #000000;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.menu-lista2 ul li img[alt="icone carro"] {
+  margin-top: 55px;   
+  width: 95px;        
+}
+
+/*  SEÇÃO CONTATO  */
+.contato {
+  background-color: #FAF4E8;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 80px 10%;
+}
+
+/* Texto à esquerda */
+.titulo4 {
+  flex: 1;
+  max-width: 400px;
+}
+
+.titulo4 h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+  color: #FEB84C;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.titulo4 p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* Bloco do formulário */
+#contato {
+  flex: 1;
+  background-color: #FEB84C;
+  border-radius: 25px;
+  padding: 50px 40px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* Formulário */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Campos de entrada */
+form input,
+form textarea {
+  background-color: #fff;
+  border: 2px dashed #B74426;
+  border-radius: 10px;
+  padding: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #3B3B3B;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ajuste da altura do campo mensagem */
+form textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Botão enviar */
+form button {
+  align-self: center;
+  background-color: #B74426;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  border: 2px dashed #7A2B14;
+  border-radius: 10px;
+  padding: 12px 35px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #912d18;
+  transform: translateY(-2px);
+}
+
 form input {
   display: block;
 }
 form button {
   display: block;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #F16C29;
+  padding: 30px 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Remove título "Contatos oficiais" */
+footer .rodape-titulo {
+  display: none;
+}
+
+/* Container geral das redes */
+.redes-sociais {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cada rede (Instagram e Facebook) */
+.redes-sociais div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Ícones das redes */
+.redes-sociais img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1); /* deixa o ícone branco */
+}
+
+/* Texto */
+.redes-sociais a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+
+.redes-sociais a:hover {
+  text-decoration: underline;
+}
+
+/* Linha divisória e usuário ao lado (Instagram) */
+.instagram a::after {
+  content: "  ||  @ongapasfapoficial";
+  color: #fff;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+/*Responsividade*/
+/* Tablets */
+@media (max-width: 1024px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .titulos {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .botao-imagem {
+    margin-top: 30px;
+  }
+
+  .cachorro-land {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  #como-ajudar {
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .img-garrafa {
+    right: 15%;
+    top: 50%;
+  }
+
+  .menu-lista .lista {
+    flex-direction: column;
+    padding: 40px 30px;
+  }
+
+  .menu-lista2 ul {
+    gap: 25px;
+  }
+
+  .menu-lista2 ul li {
+    width: 220px;
+    height: 280px;
+  }
+
+  .contato {
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 8%;
+  }
+
+  #contato {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px 40px;
+  }
+}
+
+/* celulares grandes */
+@media (max-width: 768px) {
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .titulos .textos h1 {
+    font-size: 2.5rem;
+  }
+
+  .tamp {
+    font-size: 2rem;
+  }
+
+  .titulos .textos p {
+    font-size: 1rem;
+  }
+
+  .botao {
+    font-size: 1.4rem;
+    padding: 10px 30px;
+  }
+
+  .texto2 h2 {
+    font-size: 2rem;
+  }
+
+  .texto2 p {
+    font-size: 1rem;
+  }
+
+  .tampinhas {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .tampinhas li {
+    font-size: 1.2rem;
+  }
+
+  .img-garrafa {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  .img-garrafa img[alt="Imagem garrafa com tampinhas"] {
+    width: 250px;
+  }
+
+  .menu-lista2 ul li {
+    width: 200px;
+    height: 260px;
+  }
+
+  .titulo4 h5 {
+    font-size: 2.3rem;
+    text-align: center;
+  }
+
+  .titulo4 p {
+    text-align: center;
+  }
+
+  form {
+    gap: 12px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    align-items: center;
+    text-align: center;
+  }
+
+  .redes-sociais {
+    align-items: center;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .titulos .textos h1 {
+    font-size: 2rem;
+  }
+
+  .tamp {
+    font-size: 1.6rem;
+    padding: 0 15px;
+  }
+
+  .titulos .textos p {
+    font-size: 0.9rem;
+  }
+
+  .botao {
+    font-size: 1.1rem;
+    padding: 8px 20px;
+  }
+
+  .tampinhas {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .tampinhas li {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .menu-lista2 ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .menu-lista2 ul li {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .titulo4 h5 {
+    font-size: 1.8rem;
+  }
+
+  #contato {
+    padding: 30px 20px;
+  }
+
+  footer {
+    padding: 20px;
+  }
+
+  .redes-sociais div {
+    flex-direction: column;
+  }
 }
