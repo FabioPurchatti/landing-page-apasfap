@@ -255,7 +255,7 @@ a {
   justify-content: center;
   align-items: flex-start;
   background-color: #faf4e8;
-  padding: 60px 6%;
+  padding: 100px 6%;
   gap: 48px;
   position: relative;
   margin-left: 170px;
@@ -303,12 +303,13 @@ a {
 /* Imagem da garrafa sobreposta */
 .img-garrafa {
   position: absolute;
-  right: 43%;
-  top: 36%;
+  right: 35%;
+  top: 29%;
   bottom: -25px;
   z-index: 3;
   transform: translateY(-50%);
   z-index: 2;
+  padding: 100px 6%;
 }
 
 .img-garrafa img[alt="Imagem garrafa com tampinhas"] {
@@ -576,4 +577,221 @@ footer .rodape-titulo {
   color: #fff;
   font-weight: 700;
   margin-left: 8px;
+}
+
+/*Responsividade*/
+/* Tablets */
+@media (max-width: 1024px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .titulos {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .botao-imagem {
+    margin-top: 30px;
+  }
+
+  .cachorro-land {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  #como-ajudar {
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .img-garrafa {
+    right: 15%;
+    top: 50%;
+  }
+
+  .menu-lista .lista {
+    flex-direction: column;
+    padding: 40px 30px;
+  }
+
+  .menu-lista2 ul {
+    gap: 25px;
+  }
+
+  .menu-lista2 ul li {
+    width: 220px;
+    height: 280px;
+  }
+
+  .contato {
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 8%;
+  }
+
+  #contato {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px 40px;
+  }
+}
+
+/* celulares grandes */
+@media (max-width: 768px) {
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .titulos .textos h1 {
+    font-size: 2.5rem;
+  }
+
+  .tamp {
+    font-size: 2rem;
+  }
+
+  .titulos .textos p {
+    font-size: 1rem;
+  }
+
+  .botao {
+    font-size: 1.4rem;
+    padding: 10px 30px;
+  }
+
+  .texto2 h2 {
+    font-size: 2rem;
+  }
+
+  .texto2 p {
+    font-size: 1rem;
+  }
+
+  .tampinhas {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .tampinhas li {
+    font-size: 1.2rem;
+  }
+
+  .img-garrafa {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  .img-garrafa img[alt="Imagem garrafa com tampinhas"] {
+    width: 250px;
+  }
+
+  .menu-lista2 ul li {
+    width: 200px;
+    height: 260px;
+  }
+
+  .titulo4 h5 {
+    font-size: 2.3rem;
+    text-align: center;
+  }
+
+  .titulo4 p {
+    text-align: center;
+  }
+
+  form {
+    gap: 12px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    align-items: center;
+    text-align: center;
+  }
+
+  .redes-sociais {
+    align-items: center;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .titulos .textos h1 {
+    font-size: 2rem;
+  }
+
+  .tamp {
+    font-size: 1.6rem;
+    padding: 0 15px;
+  }
+
+  .titulos .textos p {
+    font-size: 0.9rem;
+  }
+
+  .botao {
+    font-size: 1.1rem;
+    padding: 8px 20px;
+  }
+
+  .tampinhas {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .tampinhas li {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .menu-lista2 ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .menu-lista2 ul li {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .titulo4 h5 {
+    font-size: 1.8rem;
+  }
+
+  #contato {
+    padding: 30px 20px;
+  }
+
+  footer {
+    padding: 20px;
+  }
+
+  .redes-sociais div {
+    flex-direction: column;
+  }
 }
