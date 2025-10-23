@@ -132,6 +132,7 @@ a {
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  pointer-events: none;
 }
 
 .botao {
@@ -144,8 +145,8 @@ a {
   font-size: 2rem;
   border: none;
   border-radius: 50px;
-  padding: 15px 40px;
-  z-index: 2;
+  padding: 10px 40px;
+  z-index: 3;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -153,10 +154,11 @@ a {
 
 .contorno-botao {
   position: absolute;
-  top: 13%;
+  top: 12.5%;
   height: 95px;
   padding: 11px;
   z-index: 2;
+  pointer-events: none;
 }
 
 /*Inicio seu gesto vira cuidado*/
@@ -191,7 +193,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin-top: -80px;
 }
 
@@ -426,7 +427,7 @@ a {
   justify-content: center;
   align-items: flex-start;
   gap: 60px;
-  padding: 80px 10%;
+  padding: 130px 10%;
 }
 
 /* Texto à esquerda */
@@ -555,7 +556,7 @@ footer .rodape-titulo {
 .redes-sociais img {
   width: 32px;
   height: 32px;
-  filter: brightness(0) invert(1); /* deixa o ícone branco */
+  filter: brightness(0) invert(1); 
 }
 
 /* Texto */
@@ -579,110 +580,86 @@ footer .rodape-titulo {
   margin-left: 8px;
 }
 
-/*Responsividade*/
-/* Tablets */
-@media (max-width: 1024px) {
+
+
+
+/* === Smartphones padrões (até 768px) === */
+@media (max-width: 768px) {
   nav {
     flex-direction: column;
     gap: 10px;
-  }
-
-  .titulos {
-    flex-direction: column;
-    height: auto;
     text-align: center;
   }
 
-  .botao-imagem {
-    margin-top: 30px;
-  }
-
-  .cachorro-land {
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
-
-  #como-ajudar {
-    margin-left: 0;
-    align-items: center;
-  }
-
-  .img-garrafa {
-    right: 15%;
-    top: 50%;
-  }
-
-  .menu-lista .lista {
-    flex-direction: column;
-    padding: 40px 30px;
-  }
-
-  .menu-lista2 ul {
-    gap: 25px;
-  }
-
-  .menu-lista2 ul li {
-    width: 220px;
-    height: 280px;
-  }
-
-  .contato {
-    flex-direction: column;
-    gap: 40px;
-    padding: 60px 8%;
-  }
-
-  #contato {
-    width: 100%;
-  }
-
-  footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 25px 40px;
-  }
-}
-
-/* celulares grandes */
-@media (max-width: 768px) {
   nav a {
     font-size: 0.9rem;
   }
 
-  .titulos .textos h1 {
-    font-size: 2.5rem;
+  .titulos {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    height: auto;
   }
 
-  .tamp {
-    font-size: 2rem;
-  }
-
-  .titulos .textos p {
-    font-size: 1rem;
+  .botao-imagem {
+    margin-top: 30px;
+    position: relative;
+    text-align: center;
   }
 
   .botao {
-    font-size: 1.4rem;
-    padding: 10px 30px;
+    width: 60%;
+    font-size: 1.3rem;
+    padding: 12px 20px;
+    margin: 0 auto;
+    display: block;
   }
 
-  .texto2 h2 {
-    font-size: 2rem;
+  .cachorro-land {
+    position: relative;
+    width: 100vw; /* ocupa toda a largura da tela */
+    height: auto;
+    object-fit: cover;
   }
 
-  .texto2 p {
+  .texto2 {
+    margin-top: -5%;
+    padding: 40px 20px;
+  }
+
+  /* === BLOCO BRANCO (menu-lista) === */
+  .menu-lista {
+    margin-top: -8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-lista .lista {
+    width: 90%;          /* deixa mais estreito e proporcional à tela */
+    max-width: 500px;    /* limite para centralização */
+    padding: 25px 20px;  /* reduz espaçamento interno */
+    margin: 0 auto;
+  }
+
+  .menu-lista .lista img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .menu-lista .lista p {
     font-size: 1rem;
   }
 
-  .tampinhas {
-    width: 90%;
-    padding: 25px;
-  }
-
-  .tampinhas li {
-    font-size: 1.2rem;
+  /* === COMO AJUDAR === */
+  #como-ajudar {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 5%;
+    margin: 0;
   }
 
   .img-garrafa {
@@ -690,7 +667,6 @@ footer .rodape-titulo {
     right: 0;
     top: 0;
     transform: none;
-    padding: 0;
     margin-top: 30px;
   }
 
@@ -698,18 +674,33 @@ footer .rodape-titulo {
     width: 250px;
   }
 
+  /* === PONTOS DE COLETA === */
+  .menu-lista2 ul {
+    gap: 20px;
+    justify-content: center;
+  }
+
   .menu-lista2 ul li {
-    width: 200px;
-    height: 260px;
+    width: 180px;
+    height: 250px;
   }
 
-  .titulo4 h5 {
-    font-size: 2.3rem;
-    text-align: center;
+  /* === CONTATO === */
+  .contato {
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 5%;
+    align-items: center;
   }
 
-  .titulo4 p {
+  .contato .titulo4 {
     text-align: center;
+    max-width: 100%;
+  }
+
+  #contato {
+    width: 90%;
+    margin: 0 auto;
   }
 
   form {
@@ -721,74 +712,18 @@ footer .rodape-titulo {
     font-size: 0.9rem;
   }
 
+  /* === FOOTER === */
   footer {
+    flex-direction: column;
     align-items: center;
+    gap: 15px;
+    padding: 25px 20px;
     text-align: center;
   }
 
   .redes-sociais {
     align-items: center;
-  }
-}
-
-/* Celulares pequenos */
-@media (max-width: 480px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 8px;
-  }
-
-  .titulos .textos h1 {
-    font-size: 2rem;
-  }
-
-  .tamp {
-    font-size: 1.6rem;
-    padding: 0 15px;
-  }
-
-  .titulos .textos p {
-    font-size: 0.9rem;
-  }
-
-  .botao {
-    font-size: 1.1rem;
-    padding: 8px 20px;
-  }
-
-  .tampinhas {
-    width: 95%;
-    padding: 20px;
-  }
-
-  .tampinhas li {
-    font-size: 1rem;
-    line-height: 1.7;
-  }
-
-  .menu-lista2 ul {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .menu-lista2 ul li {
-    width: 90%;
-    height: auto;
-    padding: 20px;
-  }
-
-  .titulo4 h5 {
-    font-size: 1.8rem;
-  }
-
-  #contato {
-    padding: 30px 20px;
-  }
-
-  footer {
-    padding: 20px;
+    gap: 10px;
   }
 
   .redes-sociais div {
