@@ -9,6 +9,7 @@
 
 body {
   background-color: #faf4e8;
+
 }
 
 /* Estilos nav*/
@@ -39,6 +40,16 @@ nav img {
 a {
   text-decoration: none;
   color: black;
+}
+
+
+.patinhas {
+  position: fixed;
+  background-size: cover;
+  z-index: 0;
+  pointer-events: none;
+  size:40px;
+  opacity: 10;
 }
 
 .logo {
@@ -658,9 +669,10 @@ footer .rodape-titulo {
   #como-ajudar {
     flex-direction: column;
     align-items: center;
-    padding: 60px 5%;
-    margin: 0;
+ 
   }
+
+ 
 
   .img-garrafa {
     position: relative;
@@ -668,13 +680,24 @@ footer .rodape-titulo {
     top: 0;
     transform: none;
     margin-top: 30px;
+      transform: translateY(-77%);
+    margin-right: -60%;
+   
   }
 
   .img-garrafa img[alt="Imagem garrafa com tampinhas"] {
-    width: 250px;
+    width: 425px;
+    height: auto;
   }
 
+  
   /* === PONTOS DE COLETA === */
+  .ponto-coleta {
+    margin-bottom: 0;
+    padding-bottom: 10px;
+  }
+
+
   .menu-lista2 ul {
     gap: 20px;
     justify-content: center;
