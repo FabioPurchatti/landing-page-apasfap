@@ -8,6 +8,7 @@
     <title>Quero ajudar</title>
     <script src="scripts/scroll.js"></script>
     <link rel="stylesheet" href="styles/estilo.css">
+    <link rel="stylesheet" href="styles/animacoes.css">
 
 </head>
 
@@ -15,7 +16,7 @@
 
     <section>
         <nav>
-          
+
             <a href="#" class="logo"><img src="img/logo.jpg"></a>
             <a href="#conheca" class="nav_btn">Conheça o projeto</a>
             <a href="#como-ajudar" class="nav_btn">Como ajudar?</a>
@@ -26,16 +27,15 @@
 
     <section>
         <div class="titulos">
-            <div class="textos">
-                  <img src="img/Patas.png" alt="Patas de cachorro" class="patinhas">
+
+            <div class="textos animate-on-scroll animate-slide-left">
                 <h1>Junte <span class="tamp">tampinhas,</span> <br> salve vidas!</h1>
                 <p>Cada tampinha doada se <br> transforma em alimento,<br>
                     medicamentos e amor para os <br> animais resgatados pela <br> APASFAP.</p>
-        
-            </div>
-     
 
-            <div class="botao-imagem">
+            </div>
+
+            <div class="botao-imagem animate-on-scroll animate-slide-right">
                 <button class="botao">Conheça nosso trabalho</button>
                 <img src="img/Cachorro Land.jpg" alt="Cachorro feliz" class="cachorro-land">
                 <img src="img/Untitled-22.png" alt="contorno botão" class="contorno-botao">
@@ -45,15 +45,14 @@
     </section>
 
     <section>
-        <div class="texto2" id="conheca">
+        <div class="texto2 animate-on-scroll animate-slide-up" id="conheca">
             <h2>Seu gesto vira cuidado</h2>
             <p> Todos os meses levamos as tampinhas para reciclagem,
                 e 100% do valor <br> arrecadado é usado nos <b>cuidados</b> com os
                 animais da nossa ONG.</p>
         </div>
 
-
-        <div class="menu-lista">
+        <div class="menu-lista animate-on-scroll">
             <ul class="lista">
                 <li>
                     <div>
@@ -90,30 +89,30 @@
 
     </section>
 
-<section id="como-ajudar">
-  <div class="container-tampinhas">
-    <h3 class="titulo-tampinhas">Aceitamos tampinhas de:</h3>
-    <div class="tampinhas">
-      <ul>
-        <li>Garrafas PET</li>
-        <li>Produtos de limpeza</li>
-        <li>Potes de alimentos</li>
-        <li>Cosméticos e higiene</li>
-        <li>Caixinhas longa vida</li>
-      </ul>
-    </div>
-  </div>
-</section>
+    <section id="como-ajudar" class="animate-on-scroll animate-fade-in">
+        <div class="container-tampinhas">
+            <h3 class="titulo-tampinhas">Aceitamos tampinhas de:</h3>
+            <div class="tampinhas">
+                <ul>
+                    <li>Garrafas PET</li>
+                    <li>Produtos de limpeza</li>
+                    <li>Potes de alimentos</li>
+                    <li>Cosméticos e higiene</li>
+                    <li>Caixinhas longa vida</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
     <section>
-        <div class="titulo3" id="ponto-coleta">
+        <div class="titulo3 animate-on-scroll animate-slide-up" id="ponto-coleta">
             <h4>Pontos de coleta</h4>
             <p>Pode entregar a um voluntário ou leve aos
                 nossos pontos de coleta</p>
 
         </div>
 
-        <div class="menu-lista2">
+        <div class="menu-lista2 animate-on-scroll">
             <ul>
                 <li>
                     <div>
@@ -142,7 +141,7 @@
     </section>
 
     <section class="contato">
-        <div class="titulo4">
+        <div class="titulo4 animate-on-scroll animate-slide-left">
             <h5>Seja uma escola parceira!</h5>
             <p>
                 Nós fazemos ações em escolas levando muita diversão e conscientização para as crianças!
@@ -151,32 +150,21 @@
 
         </div>
 
-        <div id="contato">
-            <form action="/enviar-dados" method="post">
-
-
+        <div id="contato" class="animate-on-scroll animate-slide-right">
+            <form id="contact-form" action="scripts/script.php" method="post">
                 <input type="text" id="nome" name="nome" placeholder="NOME">
                 <input type="tel" id="telefone" name="telefone" placeholder="TELEFONE">
                 <input type="email" id="email" name="email" placeholder="E-MAIL">
                 <input type="text" id="assunto" name="assunto" placeholder="ASSUNTO">
                 <textarea id="mensagem" name="mensagem" placeholder="MENSAGEM"></textarea>
                 <button type="submit" id="enviar" name="enviar">ENVIAR MENSAGEM</button>
-
-
-
             </form>
         </div>
-
-
     </section>
 
 
 
     <footer>
-        <div class="rodape-titulo">
-            <h5>Contatos oficiais</h5>
-        </div>
-
         <div class="redes-sociais">
             <div class="instagram">
                 <img src="img/Instagram.png" class="instagram-icon">
@@ -191,9 +179,11 @@
     </footer>
 
 
+    <div id="toast-container"></div>
 
 
-
+    <script src="scripts/validacaodados.js"></script>
+    <script src="scripts/animacoes.js"></script>
 
 </body>
 
