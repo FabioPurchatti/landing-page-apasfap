@@ -10,25 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const mensagemInput = document.getElementById('mensagem');
     const assuntoInput = document.getElementById('assunto'); // Você também tem esse campo
 
-    // --- Funções de Validação ---
-
-    /**
-     * Valida o formato do e-mail usando Regex.
-     * @param {string} email
-     * @returns {boolean}
-     */
     function isValidEmail(email) {
         // Expressão regular para validar e-mail
         const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         return re.test(String(email).toLowerCase());
     }
 
-    /**
-     * Valida o telefone (permite (xx) xxxxx-xxxx e apenas números).
-     * Requer pelo menos 9 dígitos numéricos.
-     * @param {string} phone
-     * @returns {boolean}
-     */
     function isValidPhone(phone) {
         // Remove todos os caracteres não numéricos
         const digits = phone.replace(/\D/g, '');
@@ -36,13 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return digits.length >= 9;
     }
 
-    // --- Função do Toast (movida do HTML) ---
+    // Toast
 
-    /**
-     * Função para exibir o toast
-     * @param {string} message - A mensagem a ser exibida
-     * @param {string} type - 'success' (padrão) ou 'error'
-     */
     function showToast(message, type = 'success') {
         const container = document.getElementById('toast-container');
         // Se o container não existir no HTML, não faz nada
@@ -75,13 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3500);
     }
 
-    // --- Listener Principal do Formulário ---
+    // Listener do Formulário
 
     if (form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault(); // Impede o envio padrão da página
 
-            // --- Bloco de Validação ---
+            // Bloco de Validação
             const nome = nomeInput.value.trim();
             const email = emailInput.value.trim();
             const telefone = telefoneInput.value.trim();
@@ -112,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             
-            // --- Fim da Validação ---
+            // Fim da Validação
             // Se passou em tudo, continua com o envio
 
             const formData = new FormData(this);

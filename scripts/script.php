@@ -49,9 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     } catch (PDOException $e) {
         // Erro de banco de dados
-        // Em produção, é melhor logar $e->getMessage() e enviar uma msg genérica
         $response['message'] = 'Erro ao salvar no banco de dados. Tente novamente.';
-        // $response['message'] = 'Erro ao inserir dados: ' . $e->getMessage(); // Para depuração
     }
 
 }

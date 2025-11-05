@@ -547,7 +547,7 @@ form button {
   display: block;
 }
 
-/* ===== Footer ===== */
+/* Footer */
 footer {
   background-color: #F16C29;
   padding: 30px 80px;
@@ -608,7 +608,7 @@ footer .rodape-titulo {
 
 
 
-/* === Smartphones padrões (até 768px) === */
+/* Smartphones padrões (até 768px) */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -655,7 +655,7 @@ footer .rodape-titulo {
     padding: 40px 20px;
   }
 
-  /* === BLOCO BRANCO (menu-lista) === */
+  /* BLOCO BRANCO (menu-lista) */
   .menu-lista {
     margin-top: -8%;
     display: flex;
@@ -679,7 +679,7 @@ footer .rodape-titulo {
     font-size: 1rem;
   }
 
-  /* === COMO AJUDAR === */
+  /* COMO AJUDAR */
   #como-ajudar {
     flex-direction: column;
     align-items: center;
@@ -705,7 +705,7 @@ footer .rodape-titulo {
   }
 
   
-  /* === PONTOS DE COLETA === */
+  /* PONTOS DE COLETA */
   .ponto-coleta {
     margin-bottom: 0;
     padding-bottom: 10px;
@@ -722,7 +722,7 @@ footer .rodape-titulo {
     height: 250px;
   }
 
-  /* === CONTATO === */
+  /* CONTATO */
   .contato {
     flex-direction: column;
     gap: 30px;
@@ -749,7 +749,7 @@ footer .rodape-titulo {
     font-size: 0.9rem;
   }
 
-  /* === FOOTER === */
+  /* FOOTER */
   footer {
     flex-direction: column;
     align-items: center;
@@ -769,7 +769,7 @@ footer .rodape-titulo {
 }
 
 
-/* ===== Estilos Toast de Confirmação ===== */
+/* Estilos Toast de Confirmação */
 #toast-container {
   position: fixed;
   bottom: 30px;
