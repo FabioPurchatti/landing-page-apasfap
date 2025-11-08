@@ -1,0 +1,89 @@
+/*
+  Classe base para elementos que serão animados.
+  Define o estado inicial (invisível) e a transição.
+*/
+.animate-on-scroll {
+    opacity: 0;
+    /* Define uma transição suave para opacidade e transformação */
+    transition: opacity 0.6s ease-out, transform 0.8s ease-out;
+}
+
+/* Animação: Deslizar de baixo para cima */
+.animate-slide-up {
+    transform: translateY(60px); /* Começa mais para baixo */
+}
+
+/* Animação: Deslizar da esquerda para a direita */
+.animate-slide-left {
+    transform: translateX(-100px);
+}
+
+/* Animação: Deslizar da direita para a esquerda */
+.animate-slide-right {
+    transform: translateX(100px);
+}
+
+/* Animação: Zoom (Aparecer crescendo) */
+.animate-zoom-in {
+    transform: scale(0.8);
+}
+
+/* Animação: Fade-in (Apenas opacidade, sem movimento) */
+.animate-fade-in {
+    /* Não precisa de transform inicial */
+}
+
+/*
+  Classe adicionada pelo JS quando o elemento está visível.
+  Reseta todos para o estado normal (visível e na posição original).
+*/
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+/*
+  Regras para as listas de "Seu gesto vira cuidado" e "Pontos de coleta".
+  Os <li> (itens da lista) começarão invisíveis e um pouco para baixo.
+*/
+.menu-lista li,
+.menu-lista2 li {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/*
+  Quando o container PAI (.menu-lista ou .menu-lista2) ficar visível,
+  os <li> filhos (itens) se tornarão visíveis.
+*/
+.menu-lista.is-visible li,
+.menu-lista2.is-visible li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*
+  Efeito "Staggered" (em cascata):
+  Define um atraso (delay) diferente para cada item,
+  fazendo com que eles apareçam um após o outro.
+*/
+.menu-lista.is-visible li:nth-child(1),
+.menu-lista2.is-visible li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.menu-lista.is-visible li:nth-child(2),
+.menu-lista2.is-visible li:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.menu-lista.is-visible li:nth-child(3),
+.menu-lista2.is-visible li:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+/* A primeira lista tem 4 itens */
+.menu-lista.is-visible li:nth-child(4) {
+    transition-delay: 0.4s;
+}

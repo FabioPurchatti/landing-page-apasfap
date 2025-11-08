@@ -278,7 +278,7 @@ a {
 
 .imagemgato{
   position: absolute;
-  inset: 0;               /* top/right/bottom/left: 0 */
+  inset: 0;            
   z-index: 0;
   pointer-events: none;
 }
@@ -287,18 +287,12 @@ a {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 50%;         /* ocupa metade da tela como o cachorro */
+  width: 50%;        
   height: 100%;
   overflow: hidden;
-  z-index: 0;
-}
-
-.titulo-tampinhas,
-.tampinhas,
-.img-garrafa {
-  position: relative;
   z-index: 2;
 }
+
 
 
 .titulo-tampinhas {
@@ -562,7 +556,7 @@ form button {
   display: block;
 }
 
-/* ===== Footer ===== */
+/* Footer */
 footer {
   background-color: #F16C29;
   padding: 30px 80px;
@@ -623,7 +617,7 @@ footer .rodape-titulo {
 
 
 
-/* === Smartphones padrões (até 768px) === */
+/* Smartphones padrões (até 768px) */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -670,7 +664,7 @@ footer .rodape-titulo {
     padding: 40px 20px;
   }
 
-  /* === BLOCO BRANCO (menu-lista) === */
+  /* BLOCO BRANCO (menu-lista) */
   .menu-lista {
     margin-top: -8%;
     display: flex;
@@ -694,7 +688,7 @@ footer .rodape-titulo {
     font-size: 1rem;
   }
 
-  /* === COMO AJUDAR === */
+  /* COMO AJUDAR */
   #como-ajudar {
     flex-direction: column;
     align-items: center;
@@ -720,7 +714,7 @@ footer .rodape-titulo {
   }
 
   
-  /* === PONTOS DE COLETA === */
+  /* PONTOS DE COLETA */
   .ponto-coleta {
     margin-bottom: 0;
     padding-bottom: 10px;
@@ -737,7 +731,7 @@ footer .rodape-titulo {
     height: 250px;
   }
 
-  /* === CONTATO === */
+  /* CONTATO */
   .contato {
     flex-direction: column;
     gap: 30px;
@@ -764,7 +758,7 @@ footer .rodape-titulo {
     font-size: 0.9rem;
   }
 
-  /* === FOOTER === */
+  /* FOOTER */
   footer {
     flex-direction: column;
     align-items: center;
@@ -781,4 +775,46 @@ footer .rodape-titulo {
   .redes-sociais div {
     flex-direction: column;
   }
+}
+
+
+/* Estilos Toast de Confirmação */
+#toast-container {
+  position: fixed;
+  bottom: 30px;
+  /* Pode ser 'right: 30px;' ou centralizado: */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  pointer-events: none; /* Permite clicar através do container */
+}
+
+.toast {
+  /* Usando a cor do botão 'ENVIAR' para consistência */
+  background-color: #B74426; 
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 16px 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.4s ease-in-out;
+  pointer-events: all; /* Permite interação com o toast se necessário */
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilo para toasts de erro */
+.toast.error {
+  background-color: #c0392b; /* Um tom de vermelho escuro */
 }
