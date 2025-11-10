@@ -292,6 +292,7 @@ a {
   height: 100%;
   overflow: hidden;
   z-index: 2;
+  object-fit: cover;
 }
 
 
@@ -638,7 +639,7 @@ footer .rodape-titulo {
   #como-ajudar { min-height: 540px; }
   .titulo-tampinhas { font-size: 2.2rem; }
   .tampinhas { width: 68%; }
-  .imagemgato img { width: 48%; height: auto; }
+  .imagemgato img { width: 48%; height: auto; margin-left: 300px;}
 
   /* Blocos laranja (pontos de coleta) */
   .menu-lista2 ul { gap: 28px; }
