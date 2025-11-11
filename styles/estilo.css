@@ -267,22 +267,34 @@ a {
 /*Bloco de como ajudar*/
 #como-ajudar {
   position: relative;
-  background-color: #F66D25; /* cor de fundo laranja */
-  background-image: url("../img/Gato.jpg"); /* imagem do gato */
-  background-repeat: no-repeat;
-  background-position: left; /* gato à direita e embaixo */
-  background-size: contain; /* mantém proporção do gato */
-  color: white;
-  padding: 80px 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 500px;
+  min-height: 600px;
   overflow: hidden;
-  border-bottom: 10px solid #faf4e8; /* faixa bege inferior */
-  z-index: -1;
+  background-color: #f16c29; 
+  border-bottom: 10px solid #FAF4E8;
 }
 
+.imagemgato{
+  position: absolute;
+  inset: 0;            
+  z-index: 0;
+  pointer-events: none;
+}
+
+.imagemgato img {
+  
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 79%;        
+  height: 130%;
+  overflow: hidden;
+  z-index: 2;
+  object-fit: cover;
+  margin-right: 300px;
+}
 
 
 
@@ -290,11 +302,12 @@ a {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
-  color: #f9feff;
+  color: #fff;
   text-align: center;
   margin-bottom: 20px;
   margin-top: -40px;
   width: 100%;
+  margin-right: 300px;
 }
 
 .tampinhas {
@@ -306,6 +319,7 @@ a {
   max-width: 1000px;
   padding: 30px 30px 30px;
   z-index: 1;
+  margin-left: 150px;
 }
 
 .tampinhas ul {
@@ -607,205 +621,220 @@ footer .rodape-titulo {
 
 
 
+/* =========================
+   MEDIA QUERIES — RESPONSIVIDADE
+   Breakpoints: 1200px | 992px | 768px | 576px
+   Cole AO FINAL do seu CSS atual
+   ========================= */
 
-/* Smartphones padrões (até 768px) */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
+/* <= 1200px (notebooks) */
+@media (max-width: 1200px) {
+  /* HERO */
+  .titulos .textos h1 { font-size: 3rem; line-height: 1.15; }
+  .tamp { font-size: 2.4rem; }
+  .titulos .textos p { font-size: 1.1rem; }
 
-  nav a {
-    font-size: 0.9rem;
-  }
+  /* Lista (cards brancos) */
+  .menu-lista .lista { max-width: 900px; padding: 50px 34px; }
+  .menu-lista .lista img { width: 100px; height: 100px; }
 
+  /* “Como ajudar” */
+  #como-ajudar { min-height: 540px; }
+  .titulo-tampinhas { font-size: 2.2rem; }
+  .tampinhas { width: 68%; }
+  .imagemgato img { width: 48%; height: auto; margin-left: 300px;}
+
+  /* Blocos laranja (pontos de coleta) */
+  .menu-lista2 ul { gap: 28px; }
+  .menu-lista2 ul li { width: 200px; height: 290px; gap: 80px; }
+
+  /* Contato */
+  .titulo4 h5 { font-size: 2.6rem; }
+}
+
+/* <= 992px (tablets landscape) */
+@media (max-width: 992px) {
+  /* NAV */
+  nav { padding: 10px 16px; gap: 8px; }
+  .logo { margin-left: 8px; }
+  nav a.nav_btn { font-size: 0.95rem; margin-right: 0.6rem; }
+
+  /* HERO empilhado */
   .titulos {
+    height: auto;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px 20px;
-    height: auto;
+    gap: 24px;
+    padding: 24px 16px 0;
   }
+  .textos { padding-right: 8px; }
+  .titulos .textos h1 { font-size: 2.6rem; }
+  .tamp { font-size: 2rem; display: inline-block; }
+  .titulos .textos p { font-size: 1.05rem; margin-bottom: 22px; }
 
-  .botao-imagem {
-    margin-top: 30px;
-    position: relative;
-    text-align: center;
-  }
+  .botao-imagem { min-height: 340px; padding: 36px 0 0; }
+  .botao { top: 8%; font-size: 1.5rem; padding: 10px 28px; }
+  .contorno-botao { top: 6%; height: 13%; width: 86%; }
+  .cachorro-land { position: relative; height: 360px; object-fit: contain; }
 
-  .botao {
-    width: 60%;
-    font-size: 1.3rem;
-    padding: 12px 20px;
-    margin: 0 auto;
-    display: block;
-  }
-
-  .cachorro-land {
-    position: relative;
-    width: 100vw; /* ocupa toda a largura da tela */
-    height: auto;
-    object-fit: cover;
-  }
-
-  .texto2 {
-    margin-top: -5%;
-    padding: 40px 20px;
-  }
-
-  /* BLOCO BRANCO (menu-lista) */
-  .menu-lista {
-    margin-top: -8%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .menu-lista .lista {
-    width: 90%;          /* deixa mais estreito e proporcional à tela */
-    max-width: 500px;    /* limite para centralização */
-    padding: 25px 20px;  /* reduz espaçamento interno */
-    margin: 0 auto;
-  }
-
-  .menu-lista .lista img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .menu-lista .lista p {
-    font-size: 1rem;
-  }
+  /* Texto 2 / cards */
+  .menu-lista { margin-top: -36px; padding: 0 12px; }
+  .menu-lista ul { width: 100%; gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .menu-lista .lista { width: 100%; max-width: 100%; padding: 36px 24px; }
 
   /* COMO AJUDAR */
-  #como-ajudar {
-    flex-direction: column;
-    align-items: center;
- 
-  }
+  #como-ajudar { padding: 40px 16px 24px; align-items: flex-start; }
+  .titulo-tampinhas { margin-top: 0; }
+  .tampinhas { width: 72%; padding: 24px; }
 
- 
+  /* ancora o gato ao rodapé da seção e evita sobreposições */
+  .imagemgato { inset: auto 0 0 0; }
+  .imagemgato img { position: relative; width: 44%; height: auto; }
 
-  .img-garrafa {
-    position: relative;
-    right: 0;
-    top: 0;
-    transform: none;
-    margin-top: 30px;
-      transform: translateY(-77%);
-    margin-right: -60%;
-   
-  }
+  /* Garrafa (se estiver usando) */
+  .img-garrafa { right: 28%; top: 54%; padding: 50px 4%; }
+  .img-garrafa img[alt="Imagem garrafa com tampinhas"] { width: 360px; transform: translateY(-18px); }
 
-  .img-garrafa img[alt="Imagem garrafa com tampinhas"] {
-    width: 425px;
-    height: auto;
-  }
-
-  
-  /* PONTOS DE COLETA */
-  .ponto-coleta {
-    margin-bottom: 0;
-    padding-bottom: 10px;
-  }
-
-
+  /* Pontos de coleta — 3 por linha com wrap */
   .menu-lista2 ul {
-    gap: 20px;
+    max-width: 920px;
+    gap: 24px;
+    padding: 0 12px;
     justify-content: center;
   }
-
   .menu-lista2 ul li {
-    width: 180px;
-    height: 250px;
+    width: calc(33.333% - 16px);
+    min-width: 220px;
+    height: 280px;
+    gap: 64px;
   }
 
-  /* CONTATO */
+  /* Contato empilhado */
   .contato {
     flex-direction: column;
-    gap: 30px;
-    padding: 50px 5%;
-    align-items: center;
+    align-items: stretch;
+    gap: 28px;
+    padding: 80px 6%;
   }
+  #contato { padding: 34px 28px; }
 
-  .contato .titulo4 {
-    text-align: center;
-    max-width: 100%;
+  /* Footer */
+  footer { padding: 22px 22px; gap: 18px; }
+}
+
+/* <= 768px (tablets portrait / celulares grandes) */
+@media (max-width: 768px) {
+  /* NAV */
+  nav { flex-wrap: wrap; }
+  nav img { width: 44px; border-radius: 44px; }
+  nav a.nav_btn { font-size: 0.9rem; }
+
+  /* HERO */
+  .titulos .textos h1 { font-size: 2.2rem; }
+  .tamp { font-size: 1.7rem; }
+  .titulos .textos p { font-size: 1rem; }
+  .botao-imagem { min-height: 300px; }
+  .botao { font-size: 1.25rem; padding: 8px 22px; }
+  .contorno-botao { display: none; }
+  .cachorro-land { height: 300px; margin-top: 6px; }
+
+  /* Texto 2 */
+  .texto2 { padding: 56px 16px 16px; }
+  .texto2 h2 { font-size: 2rem; }
+  .texto2 p { font-size: 1.05rem; }
+
+  /* Lista 1 */
+  .menu-lista .lista { border-radius: 22px; padding: 28px 18px; }
+  .menu-lista .lista img { width: 80px; height: 80px; }
+  .menu-lista .lista p { font-size: 1rem; }
+
+  /* COMO AJUDAR — coluna, prioriza conteúdo */
+  #como-ajudar { flex-direction: column; min-height: unset; padding-bottom: 16px; }
+  .tampinhas { width: 100%; max-width: 720px; }
+  .tampinhas li { font-size: 1.2rem; line-height: 1.8; }
+  .imagemgato img { width: 60%; opacity: 0.9; }
+
+  /* Pontos de coleta — 2 por linha */
+  .menu-lista2 ul { gap: 18px; max-width: 700px; }
+  .menu-lista2 ul li {
+    width: calc(50% - 12px);
+    min-width: 220px;
+    height: 260px;
+    gap: 48px;
   }
+  .menu-lista2 ul li img { width: 86px; }
+  .menu-lista2 ul li p { font-size: 0.95rem; }
 
-  #contato {
-    width: 90%;
-    margin: 0 auto;
+  /* Contato */
+  .titulo4 h5 { font-size: 2.2rem; }
+  .titulo4 p { font-size: 0.95rem; }
+  #contato { padding: 26px 20px; }
+
+  /* Footer */
+  .redes-sociais a { font-size: 1rem; }
+  .instagram a::after { display: block; margin-left: 0; }
+}
+
+/* <= 576px (celulares) */
+@media (max-width: 576px) {
+  /* NAV */
+  nav { padding: 8px 12px; }
+  .logo { gap: 8px; margin-left: 0; }
+  nav a.nav_btn { margin-right: 0.5rem; }
+
+  /* HERO */
+  .titulos { padding: 16px 12px 0; }
+  .titulos .textos h1 { font-size: 1.8rem; }
+  .tamp { font-size: 1.35rem; padding: 2px 14px; border-radius: 32px; }
+  .titulos .textos p { font-size: 0.98rem; margin-bottom: 14px; }
+  .botao-imagem { min-height: 240px; }
+  .botao { top: 4%; font-size: 1.05rem; padding: 8px 18px; }
+  .cachorro-land { height: 230px; }
+
+  /* Texto 2 */
+  .texto2 h2 { font-size: 1.7rem; }
+  .texto2 p { font-size: 0.98rem; }
+
+  /* Lista 1 */
+  .menu-lista .lista { padding: 22px 14px; border-radius: 18px; }
+  .menu-lista .lista img { width: 70px; height: 70px; }
+  .menu-lista .lista p { font-size: 0.95rem; }
+
+  /* COMO AJUDAR */
+  .titulo-tampinhas { font-size: 1.7rem; margin-bottom: 14px; }
+  .tampinhas { padding: 20px 16px; border-radius: 20px; }
+  .tampinhas ul { padding-left: 20px; }
+  .tampinhas li { font-size: 1.05rem; line-height: 1.7; }
+  .imagemgato img { width: 76%; opacity: 0.65; }
+
+  /* Pontos de coleta — 1 por linha */
+  .menu-lista2 ul { gap: 14px; }
+  .menu-lista2 ul li {
+    width: 100%;
+    min-width: 0;
+    height: 230px;
+    gap: 36px;
+    padding: 22px 14px;
   }
+  .menu-lista2 ul li img { width: 80px; }
+  .menu-lista2 ul li p { font-size: 0.92rem; }
 
-  form {
-    gap: 12px;
-  }
+  /* Contato */
+  .contato { padding: 56px 5%; gap: 22px; }
+  .titulo4 h5 { font-size: 1.8rem; }
+  #contato { padding: 20px 14px; }
+  form { gap: 14px; }
+  form input, form textarea { font-size: 0.95rem; }
+  form button { font-size: 1rem; padding: 10px 24px; }
 
-  form input,
-  form textarea {
-    font-size: 0.9rem;
-  }
-
-  /* FOOTER */
+  /* Footer */
   footer {
+    padding: 20px 16px;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 25px 20px;
-    text-align: center;
+    align-items: flex-start;
+    gap: 14px;
   }
-
-  .redes-sociais {
-    align-items: center;
-    gap: 10px;
-  }
-
-  .redes-sociais div {
-    flex-direction: column;
-  }
+  .redes-sociais { gap: 14px; }
+  .redes-sociais img { width: 28px; height: 28px; }
+  .redes-sociais a { font-size: 0.98rem; }
 }
 
-
-/* Estilos Toast de Confirmação */
-#toast-container {
-  position: fixed;
-  bottom: 30px;
-  /* Pode ser 'right: 30px;' ou centralizado: */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  pointer-events: none; /* Permite clicar através do container */
-}
-
-.toast {
-  /* Usando a cor do botão 'ENVIAR' para consistência */
-  background-color: #B74426; 
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 16px 25px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.4s ease-in-out;
-  pointer-events: all; /* Permite interação com o toast se necessário */
-}
-
-.toast.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Estilo para toasts de erro */
-.toast.error {
-  background-color: #c0392b; /* Um tom de vermelho escuro */
-}
