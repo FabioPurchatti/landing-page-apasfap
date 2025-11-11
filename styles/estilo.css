@@ -266,13 +266,13 @@ a {
 
 /*Bloco de como ajudar*/
 #como-ajudar {
-   position: relative;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 600px;
   overflow: hidden;
-  background-color: #FAF4E8; /* fundo creme padrão à esquerda */
+  background-color: #f16c29; 
   border-bottom: 10px solid #FAF4E8;
 }
 
@@ -288,11 +288,12 @@ a {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 50%;        
-  height: 100%;
+  width: 79%;        
+  height: 130%;
   overflow: hidden;
   z-index: 2;
   object-fit: cover;
+  margin-right: 300px;
 }
 
 
@@ -301,11 +302,12 @@ a {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
-  color: #f16c29;
+  color: #fff;
   text-align: center;
   margin-bottom: 20px;
   margin-top: -40px;
   width: 100%;
+  margin-right: 300px;
 }
 
 .tampinhas {
@@ -317,6 +319,7 @@ a {
   max-width: 1000px;
   padding: 30px 30px 30px;
   z-index: 1;
+  margin-left: 150px;
 }
 
 .tampinhas ul {
