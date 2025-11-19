@@ -7,6 +7,14 @@
   padding: 0;
 }
 
+:root{
+  --primary-color: #F16C29;
+  --secondary-color: #FEB84C;
+  --tertiary-color: #B74426;
+  --background-color: #FAF4E8;
+  --text-color: #2E2E2E;
+}
+
 body {
   background-color: #faf4e8;
 
@@ -138,7 +146,7 @@ a {
   align-items: center;
 }
 
-.cachorro-land {
+.cachorro-land-img{
   position: absolute;
   bottom: 0;
   right: 0;
@@ -626,29 +634,65 @@ footer .rodape-titulo {
 /* <= 992px (tablets landscape) */
 @media (max-width: 992px) {
   /* NAV */
-  nav { padding: 10px 16px; gap: 8px; }
+  nav { padding: 10px 16px; gap: 8px; }/*
   .logo { margin-left: 55px; }
   nav a.nav_btn { font-size: 0.95rem; margin-right: 0.6rem; }
 
   /* HERO empilhado */
-  .titulos {
+   .titulos {
     height: auto;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
     padding: 24px 16px 0;
+    background-color: #F1702F;
+    width: 100vw;
   }
-  .textos { padding-right: 8px; margin-left: 50px; }
-  .titulos .textos h1 { font-size: 2.6rem; }
-  .tamp { font-size: 2rem; display: inline-block; }
-  .titulos .textos p { font-size: 1.05rem; margin-bottom: 22px; }
+  .textos {
+    padding-right: 0;
+    background-color: #F1702F;
+    text-align:center;
+  }
+  
+   .titulos .textos h1 { 
+    font-size: 3rem; 
+    margin-bottom: 12px;
+    margin-left: 12px;
+    text-align: center;
+  }
+    .tamp { 
+    font-size: 3rem;
+  }
+  .titulos .textos p { 
+    font-size: 1.1rem; 
+    margin-bottom: 18px; 
+  }
 
-  .botao-imagem { min-height: 340px; padding: 36px 0 0; }
-  .botao { top: 8%; font-size: 1.5rem; padding: 10px 28px; }
-  .contorno-botao { top: 6%; height: 20%; width: 55%; }
-  .cachorro-land { position: relative; height: 360px; object-fit: contain; }
+  /*.botao-imagem { min-height: 340px; padding: 350px 0 100px;}*/
+    .botao-imagem {
+    background-color: #F1702F;
+    padding: 0;              /* tira espaço inútil */
+    margin-top: -10px;       /* aproxima do texto */
+    position: relative;
+  }
+  /*.botao { top: 8%; font-size: 1.5rem; padding: 10px 28px; }*/
+    .botao {
+    font-size: 1.5rem;
+    padding: 10px 28px;
+    margin-bottom: 20px;
+  }
+  /*.contorno-botao { top: 6.5%; height: 7.5%; width: 70%; }*/
+    .contorno-botao {
+    top: 12.5%;
+    height: 9vh;
+    width: 55vw;
+  }
+  .cachorro-land-img { position: relative; height:80vh;  width: 100vw;  top: 0; padding:0; margin-top: -40px; display: block; }
+
+
 
   /* Texto 2 / cards */
-  .menu-lista { margin-top: -36px; padding: 0 12px; margin-right: 23px; }
+ 
+  .menu-lista { margin-top: -36px; padding: 10px; margin-right: 23px; }
   .menu-lista ul { width: 100%; gap: 16px; flex-wrap: wrap; justify-content: center; }
   .menu-lista .lista { width: 100%; max-width: 100%; padding: 36px 24px; }
 
