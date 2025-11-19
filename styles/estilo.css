@@ -21,6 +21,7 @@ body {
 }
 
 /* Estilos nav*/
+
 nav {
   background-color: #f9feff;
   padding: 10px 10px 10px 10px;
@@ -632,22 +633,44 @@ footer .rodape-titulo {
  /*RESPONSIVIDADE para pixels 992px | 768px | 576px*/
 
 /* <= 992px (tablets landscape) */
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   /* NAV */
-  nav { padding: 10px 16px; gap: 8px; }/*
-  .logo { margin-left: 55px; }
-  nav a.nav_btn { font-size: 0.95rem; margin-right: 0.6rem; }
+  nav { padding: 10px 16px; gap: 8px; }
+  /*.logo { margin-left: 55px; }
+  nav a.nav_btn { font-size: 0.95rem; margin-right: 0.6rem; }*/
+
+    input[type="checkbox"] :checked ~ nav{
+  display:block;
+}
+
+/*nav {
+display: none;
+}*/
+
+
+
+
 
   /* HERO empilhado */
    .titulos {
     height: auto;
     flex-direction: column;
-    gap: 16px;
+    gap: 25px;
     padding: 24px 16px 0;
     background-color: #F1702F;
-    width: 100vw;
+
   }
-  .textos {
+
+
+
+
+
+
+
+
+
+
+ .textos {
     padding-right: 0;
     background-color: #F1702F;
     text-align:center;
@@ -732,122 +755,5 @@ footer .rodape-titulo {
 
   /* Footer */
   footer { padding: 22px 22px; gap: 18px; margin-left: 1px; }
-}
-
-/* <= 768px (tablets portrait / celulares grandes) */
-@media (max-width: 768px) {
-  /* NAV */
-  nav { flex-wrap: wrap; }
-  nav img { width: 44px; border-radius: 44px; }
-  nav a.nav_btn { font-size: 0.9rem; }
-
-  /* HERO */
-  .titulos .textos h1 { font-size: 2.2rem; }
-  .tamp { font-size: 1.7rem; }
-  .titulos .textos p { font-size: 1rem; }
-  .botao-imagem { min-height: 300px; }
-  .botao { font-size: 1.25rem; padding: 8px 22px; }
-  .contorno-botao { display: none; }
-  .cachorro-land { height: 300px; margin-top: 6px; }
-
-  /* Texto 2 */
-  .texto2 { padding: 56px 16px 16px; }
-  .texto2 h2 { font-size: 2rem; }
-  .texto2 p { font-size: 1.05rem; }
-
-  /* Lista 1 */
-  .menu-lista .lista { border-radius: 22px; padding: 28px 18px; }
-  .menu-lista .lista img { width: 80px; height: 80px; }
-  .menu-lista .lista p { font-size: 1rem; }
-
-  /* COMO AJUDAR — coluna, prioriza conteúdo */
-  #como-ajudar { flex-direction: column; min-height: auto; padding-bottom: 16px; width: 100%; height: 350px; }
-  .tampinhas { width: 40%; max-width: 720px; }
-  .tampinhas li { font-size: 1.2rem; line-height: 1.8; }
-  .imagemgato img { width: 100%; opacity: 0.9; }
-
-  /* Pontos de coleta — 2 por linha */
-  .menu-lista2 ul { gap: 18px; max-width: 700px; }
-  .menu-lista2 ul li {
-    width: calc(50% - 12px);
-    min-width: 220px;
-    height: 260px;
-    gap: 48px;
-  }
-  .menu-lista2 ul li img { width: 86px; }
-  .menu-lista2 ul li p { font-size: 0.95rem; }
-
-  /* Contato */
-  .titulo4 h5 { font-size: 2.2rem; }
-  .titulo4 p { font-size: 0.95rem; }
-  #contato { padding: 26px 20px; }
-
-  /* Footer */
-  .redes-sociais a { font-size: 1rem; }
-  .instagram a::after { display: block; margin-left: 0; }
-}
-
-/* <= 576px (celulares) */
-@media (max-width: 576px) {
-  /* NAV */
-  nav { padding: 8px 12px; margin-left: 30px; }
-  .logo { gap: 3px; margin-left: 20px; }
-  nav a.nav_btn { margin-right: -0.5rem; }
-
-  /* HERO */
-  .titulos { padding: 16px 12px 0; }
-  .titulos .textos h1 { font-size: 1.8rem; }
-  .tamp { font-size: 1.35rem; padding: 2px 14px; border-radius: 32px; }
-  .titulos .textos p { font-size: 0.98rem; margin-bottom: 14px; }
-  .botao-imagem { min-height: 240px; }
-  .botao { top: 4%; font-size: 1.05rem; padding: 8px 18px; }
-  .cachorro-land { height: 230px; }
-
-  /* Texto 2 */
-  .texto2 h2 { font-size: 1.7rem; margin-left: 50px;}
-  .texto2 p { font-size: 0.98rem; margin-left: 50px; }
-
-  /* Lista 1 */
-  .menu-lista .lista { padding: 22px 14px; border-radius: 18px; margin-left: 50px; }
-  .menu-lista .lista img { width: 70px; height: 70px; }
-  .menu-lista .lista p { font-size: 0.95rem; }
-
-  /* COMO AJUDAR */
-  .titulo-tampinhas { font-size: 1.7rem; margin-bottom: 14px; }
-  .tampinhas { padding: 20px 16px; border-radius: 20px; }
-  .tampinhas ul { padding-left: 20px; }
-  .tampinhas li { font-size: 1.05rem; line-height: 1.7; }
-  .imagemgato img { width: 90%; opacity: 1; padding:10px; }
-
-  /* Pontos de coleta — 1 por linha */
-  .menu-lista2 ul { gap: 14px; margin-left: 50px;}
-  .menu-lista2 ul li {
-    width: 100%;
-    min-width: 0;
-    height: 230px;
-    gap: 36px;
-    padding: 22px 14px;
-  }
-  .menu-lista2 ul li img { width: 80px; }
-  .menu-lista2 ul li p { font-size: 0.92rem; }
-
-  /* Contato */
-  .contato { padding: 56px 5%; gap: 22px; }
-  .titulo4 h5 { font-size: 1.8rem; }
-  #contato { padding: 20px 14px; }
-  form { gap: 14px; }
-  form input, form textarea { font-size: 0.95rem; }
-  form button { font-size: 1rem; padding: 10px 24px; }
-
-  /* Footer */
-  footer {
-    padding: 20px 16px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
-  .redes-sociais { gap: 14px; }
-  .redes-sociais img { width: 28px; height: 28px; }
-  .redes-sociais a { font-size: 0.98rem; }
 }
 
