@@ -751,7 +751,7 @@ display: none;
 
  /*RESPONSIVIDADE para pixels 4300px */
 
-@media (max-width: 4300px) {
+@media (max-width: 430px) {
   /* HERO empilhado */
     .titulos {
     height: auto;
