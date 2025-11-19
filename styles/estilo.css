@@ -774,7 +774,7 @@ display: none;
 
 .contorno-botao {
   top: 2.5%;
-   height: 13vh;
+   height: 15vh;
     width: 115vw;
 }
 #como-ajudar {
@@ -798,22 +798,29 @@ display: none;
   .tampinhas {
     width: 90%;             /* ocupa boa parte da largura */
     max-width: 360px;       /* não fica gigante */
-    margin: 0 auto 24px;    /* CENTRALIZA o bloco branco */
+    margin: 0 auto 16px;    /* CENTRALIZA o bloco branco */
     padding: 20px;
   }
 
 
   .imagemgato {
-    inset: auto 0 0 0;      /* ancora no rodapé da seção */
+    position: relative;
+    inset: auto;      /* ancora no rodapé da seção */
+    width: 100%;
+    margin-top: 8px;
+    z-index: 0;
   }
 
-    .imagemgato img {
+  .imagemgato img {
     position: relative;
-    width: 100%;
+    display: block;
+    width: 100%;           /* menorzinho pra caber bem */
+    max-width: 280px;
     height: auto;
-    margin-right: 0;
-   
+    margin: 0 auto;       /* CENTRALIZA o gato */
+    object-fit: contain;
   }
+
 
 
 
