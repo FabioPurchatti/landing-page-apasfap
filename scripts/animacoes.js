@@ -24,3 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
+
+// Menu hamburguer para telas pequenas
+
+
+  const btn = document.getElementById("btn-menu");
+  const links = document.querySelector(".nav-links");
+
+  btn.onclick = () => {
+    links.classList.toggle("ativo");
+  };
