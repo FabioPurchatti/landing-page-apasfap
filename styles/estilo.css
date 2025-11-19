@@ -634,30 +634,22 @@ html, body {
 }
 
 
- /*RESPONSIVIDADE para pixels 1200px e menores */
+ /*RESPONSIVIDADE para pixels 1200px */
 
 /* <= 1200px */
 @media (max-width: 1200px) {
-
-  .navigation-menu{
-    padding: 6%
-  }
   /* NAV */
   nav { padding: 10px 16px; gap: 8px; }
-  /*.logo { margin-left: 55px; }
-  nav a.nav_btn { font-size: 0.95rem; margin-right: 0.6rem; }*/
+  .logo { margin-left: 55px; }
+  nav a.nav_btn { font-size: 0.95rem; margin-right: 0.6rem; }
 
-    input[type="checkbox"] :checked ~ nav{
+  input[type="checkbox"] :checked ~ nav{
   display:block;
 }
 
 /*nav {
 display: none;
-}*/
-
-
-
-
+}*
 
   /* HERO empilhado */
    .titulos {
@@ -668,14 +660,6 @@ display: none;
     background-color: #F1702F;
 
   }
-
-
-
-
-
-
-
-
 
 
  .textos {
@@ -714,8 +698,8 @@ display: none;
   /*.contorno-botao { top: 6.5%; height: 7.5%; width: 70%; }*/
     .contorno-botao {
     top: 12.5%;
-    height: 9vh;
-    width: 55vw;
+    height: 8vh;
+    width: 45vw;
   }
   .cachorro-land-img { position: relative; height:80vh;  width: 100vw;  top: 0; padding:0; margin-top: -40px; display: block; }
 
@@ -723,7 +707,7 @@ display: none;
 
   /* Texto 2 / cards */
  
-  .menu-lista { margin-top: -36px; padding: 10px; margin-right: 23px; }
+  .menu-lista { margin-top: -36px; padding: 10px; margin-right: 5px; }
   .menu-lista ul { width: 100%; gap: 16px; flex-wrap: wrap; justify-content: center; }
   .menu-lista .lista { width: 100%; max-width: 100%; padding: 36px 24px; }
 
@@ -765,3 +749,41 @@ display: none;
   footer { padding: 22px 22px; gap: 18px; margin-left: 1px; }
 }
 
+ /*RESPONSIVIDADE para pixels 4300px */
+
+@media (max-width: 4300px) {
+  /* HERO empilhado */
+    .titulos {
+    height: auto;
+    flex-direction: column;
+    gap: 25px;
+    padding: 24px 16px 0;
+    background-color: #F1702F;
+    margin-left: 0%;
+  }
+
+  .tamp{
+    background-color: #f9feff;
+    color: #f16c29;
+    }
+}
+
+.botao {
+  top: 5%;
+}
+
+.contorno-botao {
+  top: 1%;
+   height: 17.5vh;
+    width: 115vw;
+}
+#como-ajudar {
+ margin-left: -50%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+#como-ajudar .titulo-tampinhas {
+  text-align: justify;
+}
