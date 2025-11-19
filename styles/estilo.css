@@ -628,6 +628,10 @@ footer .rodape-titulo {
   margin-left: 8px;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 
  /*RESPONSIVIDADE para pixels 992px | 768px | 576px*/
