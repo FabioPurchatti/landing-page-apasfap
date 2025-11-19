@@ -685,8 +685,8 @@ display: none;
   /*.botao-imagem { min-height: 340px; padding: 350px 0 100px;}*/
     .botao-imagem {
     background-color: #F1702F;
-    padding: 0;              /* tira espaço inútil */
-    margin-top: -10px;       /* aproxima do texto */
+    padding: 0;              
+    margin-top: -10px;       
     position: relative;
   }
   /*.botao { top: 8%; font-size: 1.5rem; padding: 10px 28px; }*/
@@ -774,56 +774,52 @@ display: none;
 
 .contorno-botao {
   top: 2.5%;
-   height: 15vh;
+   height: 18vh;
     width: 115vw;
 }
 #como-ajudar {
-  margin-left: 0;
-  display: flex;
+   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: left;
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;
   padding: 20px 10px;
 }
 
-  .titulo-tampinhas {
-    margin-top: 0;
-    margin-bottom: 16px;
-    margin-right: 0;
-    width: 100%;
-    text-align: center;     
-    font-size: 2rem;
-  }
+#como-ajudar .titulo-tampinhas {
+  margin: 0 auto 16px;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
 
   .tampinhas {
-    width: 90%;             /* ocupa boa parte da largura */
-    max-width: 360px;       /* não fica gigante */
-    margin: 0 auto 16px;    /* CENTRALIZA o bloco branco */
+    width: 90%;             
+    max-width: 360px;       
+    margin: 0 auto 24px;    
     padding: 20px;
-  }
-
-
-  .imagemgato {
-    position: relative;
-    inset: auto;      /* ancora no rodapé da seção */
-    width: 100%;
-    margin-top: 8px;
-    z-index: 0;
+    text-align: left;
   }
 
   .imagemgato img {
-    position: relative;
-    display: block;
-    width: 100%;           /* menorzinho pra caber bem */
-    max-width: 280px;
-    height: auto;
-    margin: 0 auto;       /* CENTRALIZA o gato */
-    object-fit: contain;
-  }
+height: 150%;
+}
 
+.contato {
+  padding: 80px 5px;
+  margin-left: 30px;  
+}
+ .contato h5{
+  text-align: center;
+ }
 
+.contato p{
+  text-align: center;
+ }
 
-
+ #contato {
+  margin-right: 20px;
+ }
 
 
 }
