@@ -777,6 +777,11 @@ display: none;
    height: 18vh;
     width: 115vw;
 }
+
+.menu-lista{
+align-items: center;
+margin-left: 2.5%;
+}
 #como-ajudar {
    display: flex;
   flex-direction: column;
@@ -801,8 +806,13 @@ display: none;
     text-align: left;
   }
 
-  .imagemgato img {
+.imagemgato img {
 height: 150%;
+}
+
+.titulo3 p{
+  text-align: center;
+  font-size: small;
 }
 
 .contato {
@@ -810,11 +820,12 @@ height: 150%;
   margin-left: 30px;  
 }
  .contato h5{
-  text-align: center;
+  text-align: left;
  }
 
 .contato p{
-  text-align: center;
+  text-align:left;
+
  }
 
  #contato {
