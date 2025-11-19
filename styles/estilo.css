@@ -628,12 +628,20 @@ footer .rodape-titulo {
   margin-left: 8px;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 
- /*RESPONSIVIDADE para pixels 992px | 768px | 576px*/
+ /*RESPONSIVIDADE para pixels 1200px e menores */
 
-/* <= 992px (tablets landscape) */
+/* <= 1200px */
 @media (max-width: 1200px) {
+
+  .navigation-menu{
+    padding: 6%
+  }
   /* NAV */
   nav { padding: 10px 16px; gap: 8px; }
   /*.logo { margin-left: 55px; }
