@@ -171,6 +171,7 @@
   top: 0.5%;
    height: 13vh;
     width: 115vw;
+    display: none;
 }
 
 .menu-lista {
@@ -256,6 +257,7 @@
 }
 
 .contorno-botao {
+  display: none;
   top: 2.5%;
    height: 17vh;
     width: 118vw;
