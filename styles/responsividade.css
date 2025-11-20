@@ -107,6 +107,125 @@
 
   /* Footer */
   footer { padding: 22px 22px; gap: 18px; margin-left: 1px; }
+
+}
+
+
+
+
+
+@media (max-width: 431px) {
+    .logo{
+    margin-left: -3px;
+    }
+
+  nav {
+    position: relative;
+  }
+
+  #hamburger {
+    display: block;
+    margin-left: auto;  
+    object-fit: contain;
+    overflow: visible;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;                 
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    background-color: #f9feff;
+    padding: 16px 0 20px;
+    border-bottom: 2px solid #f16c29;
+    z-index: 999;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+
+.titulos {
+    margin: auto;
+}
+
+.tamp {
+    background-color: #f9feff;
+    color: #f16c29;
+}
+
+
+
+.texto2 p {
+    text-align:center;
+    font-size:larger
+}
+
+.botao {
+  top: 3%;
+ 
+}
+.contorno-botao {
+  top: 0.5%;
+   height: 13vh;
+    width: 115vw;
+}
+
+.menu-lista {
+    align-items: center;
+    margin-left: 2.5%;
+}
+
+#como-ajudar {
+   display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;
+  padding: 20px 10px;
+}
+
+#como-ajudar .titulo-tampinhas {
+  margin: 0 auto 16px;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+  .tampinhas {
+    width: 90%;             
+    max-width: 360px;       
+    margin: 0 auto 24px;    
+    padding: 20px;
+    text-align: left;
+  }
+
+  .imagemgato img {
+    width: 600px;
+    top:-30px;
+    margin-left: -55%;
+  }
+
+.contato {
+  padding: 80px 5px;
+  margin-left: 30px;  
+}
+ .contato h5{
+  text-align: left;
+ }
+
+.contato p{
+  text-align:left;
+
+ }
+
+ #contato {
+  margin-right: 20px;
+ }
+
+
 }
 
  /*RESPONSIVIDADE para pixels 427px */
@@ -138,7 +257,7 @@
 
 .contorno-botao {
   top: 2.5%;
-   height: 18vh;
+   height: 13vh;
     width: 115vw;
 }
 
@@ -174,7 +293,7 @@ margin-left: 2.5%;
 
   width: 600px;
     top:-30px;
-    margin-left: -40%;
+    margin-left: -55%;
 }
 
 .titulo3 p{
@@ -237,112 +356,7 @@ margin-left: 2.5%;
 
 }
 
-@media (max-width: 431px) {
-    .logo{
-    margin-left: -3px;
-    }
 
-  nav {
-    position: relative;
-  }
-
-  #hamburger {
-    display: block;
-    margin-left: auto;  
-    object-fit: contain;
-    overflow: visible;
-  }
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 70px;                 
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    background-color: #f9feff;
-    padding: 16px 0 20px;
-    border-bottom: 2px solid #f16c29;
-    z-index: 999;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-
-.titulos {
-    margin: auto;
-}
-
-.tamp {
-    background-color: #f9feff;
-    color: #f16c29;
-}
-
-.contorno-botao{
-    top: 13%;
-   height: 13vh;
-    width: 115vw;
-}
-
-.texto2 p {
-    text-align:center;
-    font-size:larger
-}
-
-.menu-lista {
-    align-items: center;
-    margin-left: 2.5%;
-}
-
-#como-ajudar {
-   display: flex;
-  flex-direction: column;
-  justify-content: center;  
-  align-items: center;      
-  text-align: center;
-  padding: 20px 10px;
-}
-
-#como-ajudar .titulo-tampinhas {
-  margin: 0 auto 16px;
-  width: 100%;
-  text-align: center;
-  font-size: 2rem;
-}
-
-  .tampinhas {
-    width: 90%;             
-    max-width: 360px;       
-    margin: 0 auto 24px;    
-    padding: 20px;
-    text-align: left;
-  }
-
-  .imagemgato img {
-    width: 600px;
-    top:-30px;
-    margin-left: -40%;
-  }
-
-.contato {
-  padding: 80px 5px;
-  margin-left: 30px;  
-}
- .contato h5{
-  text-align: left;
- }
-
-.contato p{
-  text-align:left;
-
- }
-
- #contato {
-  margin-right: 20px;
- }
-
-}
 
 
 
