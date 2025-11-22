@@ -1,6 +1,6 @@
 /*RESPONSIVIDADE para pixels 427px */
 
-@media only screen and (max-width: 427px) {
+@media only screen and (max-width: 411px) {
   /* HERO empilhado */
 
   .logo {
@@ -20,12 +20,18 @@
   .tamp {
     background-color: #f9feff;
     color: #f16c29;
-    margin-left: -18%;
+    margin-right: 40%;
     line-height: normal;
   }
 
+  .texttos p {
+    text-align: justify;
+    font-size: larger;
+  }
+
   .botao {
-    top: 5%;
+    top: 3%;
+    margin: auto;
   }
 
   .contorno-botao {
