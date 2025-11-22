@@ -1,0 +1,129 @@
+/*RESPONSIVIDADE para pixels 427px */
+
+@media only screen and (max-width: 427px) {
+  /* HERO empilhado */
+
+  .logo {
+    margin-left: -3px;
+  }
+  .titulos {
+    height: auto;
+    flex-direction: column;
+    gap: 25px;
+    padding: 24% 16% 0;
+    background-color: #f1702f;
+    margin-left: 0%;
+    margin: auto;
+    width: auto;
+  }
+
+  .tamp {
+    background-color: #f9feff;
+    color: #f16c29;
+    margin-left: -8%;
+    line-height: normal;
+  }
+
+  .botao {
+    top: 5%;
+  }
+
+  .contorno-botao {
+    display: none;
+    top: 2.5%;
+    height: 17vh;
+    width: 118vw;
+  }
+
+  .cachorro-land-img {
+    top: -5%;
+  }
+  .menu-lista {
+    align-items: center;
+    margin-left: 2.5%;
+  }
+  #como-ajudar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  #como-ajudar .titulo-tampinhas {
+    margin: 0 auto 16px;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .tampinhas {
+    width: 90%;
+    max-width: 360px;
+    margin: 0 auto 24px;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .imagemgato img {
+    width: 600px;
+    top: -30px;
+    margin-left: -55%;
+  }
+
+  .titulo3 p {
+    text-align: center;
+    font-size: small;
+  }
+
+  .contato {
+    padding: 80px 5px;
+    margin-left: 30px;
+  }
+  .contato h5 {
+    text-align: left;
+  }
+
+  .contato p {
+    text-align: left;
+  }
+
+  #contato {
+    margin-right: 20px;
+  }
+
+  /* nav vira “base” pro menu abrir embaixo */
+  nav {
+    position: relative;
+  }
+
+  /* mostra o hambúrguer */
+  #hamburger {
+    display: block;
+    margin-left: auto;
+    object-fit: contain;
+    overflow: visible;
+  }
+
+  /* esconde os links por padrão e joga pra baixo da nav */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    background-color: #f9feff;
+    padding: 16px 0 20px;
+    border-bottom: 2px solid #f16c29;
+    z-index: 999;
+  }
+
+  /* quando o JS adicionar .active, o menu aparece */
+  .nav-links.active {
+    display: flex;
+  }
+}
