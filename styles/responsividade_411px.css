@@ -25,12 +25,12 @@
   }
 
   .texttos p {
-    text-align: justify;
+    text-align:left;
     font-size: larger;
   }
 
   .botao {
-    top: 3%;
+    top: -3%;
     margin: auto;
   }
 
