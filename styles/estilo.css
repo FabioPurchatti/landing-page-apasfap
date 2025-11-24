@@ -32,7 +32,7 @@ body {
   cursor: pointer;
 }
 
-/* ====== NAV DESKTOP (largura maior que 427px) ====== */
+
 nav {
   background-color: #f9feff;
   padding: 10px 20px;
@@ -49,15 +49,14 @@ nav {
 
 /* agrupa os links e faz eles preencherem a barra */
 .nav-links {
-  flex: 1;                       /* ocupa todo o espaço restante */
+  flex: 1;                       
   display: flex;
-  justify-content: space-evenly; /* espalha os links na largura */
-  align-items: center;
+  justify-content: space-evenly; 
 }
 
-/* estilo dos links (como estavam antes) */
+/* estilo dos links*/
 .nav-links a {
-  margin: 0;                     /* quem controla o espaçamento é o gap/justify */
+  margin: 0;                     
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -83,15 +82,15 @@ a {
 }
 
 
-.patinhas {
+/*.patinhas {
   position: fixed;
   background-size: cover;
-  z-index: 0;
+  z-index: 1;
   pointer-events: none;
   size:40px;
   opacity: 0.5;
   
-}
+}*/
 
 .logo {
   display: flex;
@@ -105,15 +104,16 @@ a {
 
 .titulos {
   display: flex;
-  align-items: stretch;
-  justify-content: space-between;
   height: 100vh;
-  
+  background: linear-gradient(to right,
+  #faf4e8 50%,
+  #f16c29 50%);
+ 
 }
 
 .textos {
   flex: 1;
-  background-color: #faf4e8;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,6 +126,7 @@ a {
   font-size: 3.5rem;
   margin-bottom: 20px;
   line-height: 1.2;
+  margin-left: 80px;
 
 }
 
@@ -139,6 +140,10 @@ a {
   background-color: #f16c29;
   border-radius: 50px;
   padding: 0 20px;
+  display: inline-block;
+  margin-left: -5px;
+  z-index: 10;
+  position: relative;
 }
 
 .titulos .textos p {
@@ -149,11 +154,9 @@ a {
   line-height: 1.6;
   color: #000;
   margin-bottom: 40px;
+  margin-left: 80px;
 }
 
-.titulos {
-  margin-left: 10px;
-}
 
 /*lado direito botão e imagem*/
 
@@ -182,7 +185,7 @@ a {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 100%;
+  width: 62.5vw;
   height: 100%;
   object-fit: cover;
   z-index: 1;
@@ -204,6 +207,7 @@ a {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
+  margin-left: -150px;
 }
 
 .contorno-botao {
@@ -214,6 +218,7 @@ a {
   padding: 11px;
   z-index: 10;
   pointer-events: none;
+  margin-left: -150px;
 }
 
 /*Inicio seu gesto vira cuidado*/

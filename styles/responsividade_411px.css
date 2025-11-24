@@ -27,7 +27,7 @@
   .textos p {
     text-align: center;
     font-size: larger;
-    margin-right: 0;
+    margin-right: auto;
   }
 
   .botao {
