@@ -32,34 +32,39 @@
   }
 
   .titulos {
-    margin: auto;
-    width: auto;
     height: auto;
-    padding: 10% 16% 0;
-    flex-direction: column;
-    gap: 25px;
+    flex-direction:column;
     background-color: #f1702f;
   }
 
   .tamp {
     background-color: #f9feff;
     color: #f16c29;
-    margin-left: -18%;
+    margin-left: 1%;
     line-height: normal;
   }
-
+  .titulos .textos p {
+    margin-left: 0;
+    text-align: center;
+    font-size: 1.1rem;
+  }
   .texto2 p {
     text-align: center;
     font-size: larger;
   }
 
-  .botao {
-    top: 13%;
+.botao {
+    top: 3%;
+    margin: auto;
+    width: 60vw;
+    padding: 10px 40px;
   }
   .contorno-botao {
-    top: 0.5%;
-    height: 13vh;
-    width: 115vw;
+    display:flex;
+    top: 1%;
+    height: 22vh;
+    width: 75vw;
+    margin-left: auto;
     display: none;
   }
 

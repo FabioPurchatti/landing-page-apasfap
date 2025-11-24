@@ -105,9 +105,7 @@ a {
 .titulos {
   display: flex;
   height: 100vh;
-  background: linear-gradient(to right,
-  #faf4e8 50%,
-  #f16c29 50%);
+ 
  
 }
 
