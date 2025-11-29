@@ -82,15 +82,14 @@ a {
 }
 
 
-/*.patinhas {
+.patinhas {
   position: fixed;
   background-size: cover;
   z-index: 1;
   pointer-events: none;
   size:40px;
   opacity: 0.5;
-  
-}*/
+}
 
 .logo {
   display: flex;
@@ -382,36 +381,6 @@ a {
   color: #f16c29;
 }
 
-
-/* Imagem da garrafa sobreposta */
-.img-garrafa {
-  position: absolute;
-  right: 35%;
-  top: 45%;
-  bottom: -25px;
-  z-index: 3;
-  transform: translateY(-50%);
-  z-index:1; 
-  padding: 100px 6%;
-}
-
-.img-garrafa img[alt="Imagem garrafa com tampinhas"] {
-  width: 450px;
-  height: auto;
-    
-  transform: translateY(-50px);
-}
-
-/* Pata decorativa */
-.img-garrafa img[src*="Pata"] {
-  position: absolute;
-  bottom: -25px;
-  left: -25px;
-  width: 50px;
-  height: auto;
-  pointer-events: none;
-}
-
 /* Pontos de coleta */
 
 #ponto-coleta {
@@ -502,7 +471,7 @@ a {
   width: 95px;        
 }
 
-/*  SEÇÃO CONTATO  */
+/*  Seção Seja uma escola parceira   */
 .contato {
   background-color: #FAF4E8;
   display: flex;
@@ -518,14 +487,55 @@ a {
   max-width: 400px;
 }
 
-.titulo4 h5 {
-  font-family: "Poppins", sans-serif;
+.btn-img {
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
   font-weight: 800;
   font-size: 3rem;
-  color: #FEB84C;
-  line-height: 1.1;
+  line-height: 1.5;
   margin-bottom: 20px;
+  padding: 35px 30px;
+  text-align: center;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+
+
+  /*imagem pata*/
+  width: 674px;
+  height: 230px;
+  margin-left: -160px;
+  background-image: url('../img/Pata.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+ 
+  
+  /*borda*/
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
 }
+
+
+.btn-img span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: #FEB84C;
+  line-height: 1.2;
+  height: 1%;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  padding: 0 20px;
+   transform: translateY(8px);
+
+}
+
+
 
 .titulo4 p {
   font-family: "Poppins", sans-serif;
@@ -533,75 +543,7 @@ a {
   font-size: 1rem;
   color: #000000;
   line-height: 1.6;
-}
-
-/* Bloco do formulário */
-#contato {
-  flex: 1;
-  background-color: #FEB84C;
-  border-radius: 25px;
-  padding: 50px 40px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Formulário */
-form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-/* Campos de entrada */
-form input,
-form textarea {
-  background-color: #fff;
-  border: 2px dashed #B74426;
-  border-radius: 10px;
-  padding: 14px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  color: #3B3B3B;
-  font-size: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Ajuste da altura do campo mensagem */
-form textarea {
-  height: 120px;
-  resize: none;
-}
-
-/* Botão enviar */
-form button {
-  align-self: center;
-  background-color: #B74426;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-size: 1.1rem;
-  border: 2px dashed #7A2B14;
-  border-radius: 10px;
-  padding: 12px 35px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: all 0.3s ease;
-}
-
-form button:hover {
-  background-color: #912d18;
-  transform: translateY(-2px);
-}
-
-form input {
-  display: block;
-}
-form button {
-  display: block;
+  text-align: center;
 }
 
 /* Footer */
