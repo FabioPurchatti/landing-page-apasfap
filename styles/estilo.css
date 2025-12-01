@@ -471,80 +471,97 @@ a {
   width: 95px;        
 }
 
-/*  Seção Seja uma escola parceira   */
+
+
+/*  Seção Seja uma escola parceira  */
+/*Seção classe e ID contato*/
 .contato {
-  background-color: #FAF4E8;
+  background-color: #FEBD59;
+  border-radius: 40px;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 60px;
-  padding: 130px 10%;
-}
+  justify-content: space-between;
+  align-items: center;
+  gap: -10px;
+  padding: 40px 60px;
+  margin: 90px 60px;
+} 
 
-/* Texto à esquerda */
+/*Textos das classes titulo4, h3 e p dentro da seção contato*/
 .titulo4 {
-  flex: 1;
-  max-width: 400px;
-}
-
-.btn-img {
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  font-weight: 800;
-  font-size: 3rem;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  padding: 35px 30px;
-  text-align: center;
-  text-decoration: none;
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-
-
-  /*imagem pata*/
-  width: 674px;
-  height: 230px;
-  margin-left: -160px;
-  background-image: url('../img/Pata.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
- 
-  
-  /*borda*/
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
 }
 
-
-.btn-img span {
+.titulo4 h3 {
   font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-size: 1.8rem;
-  color: #FEB84C;
-  line-height: 1.2;
-  height: 1%;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  padding: 0 20px;
-   transform: translateY(8px);
+  font-weight: 900;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 50px;
+  margin-left: -50px;
+  
 
 }
-
-
 
 .titulo4 p {
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 900;
+  font-size: 1.5rem;
   color: #000000;
-  line-height: 1.6;
-  text-align: center;
+  line-height: 1.5;
+  text-align: left;
+  margin-top: -30px;
+  margin-left: -110px;
 }
+
+/*Seção contato imagem pata*/ 
+.btn-img .pata-img {
+  position: relative;
+  width: 700px;  
+  height: 700px;
+  bottom: -90px;
+  margin-left: 11%;
+  display: flex;
+  margin-top: -300px;
+  margin-right: 100px;
+}
+
+.seta-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.seja-escola {
+  margin-top: -50px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #CC5719;
+  color: #ffffff;
+  border: 4px dashed #B74426;
+  border-radius: 10px;
+  padding: 10px 35px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-left: 100px;
+  size: 100px;
+}
+
+.cta-escola {
+  flex: 0 0 45%;      
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* Footer */
 footer {
