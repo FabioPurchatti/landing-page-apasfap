@@ -532,9 +532,9 @@ a {
 
 .seta-icon {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 374%;
+  left: 66.8%;
+  max-width: 7%;
 }
 
 .seja-escola {

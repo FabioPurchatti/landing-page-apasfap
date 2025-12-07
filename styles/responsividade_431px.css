@@ -107,19 +107,37 @@
     margin-left: -55%;
   }
 
+/*Seja uma escola parceira*/
   .contato {
     padding: 80px 5px;
-    margin-left: 30px;
+    margin-left: 20px;
   }
-  .contato h5 {
-    text-align: left;
+  #contato .titulo4 h3   {
+    text-align: center;
+    margin-left: 1%;
   }
 
   .contato p {
-    text-align: left;
+      text-align:center;
+      margin-left: 1%;
+      line-height: 1.5;
+      margin-bottom: 10%;
+      align-items: center;
   }
 
-  #contato {
-    margin-right: 20px;
+  .btn-img .pata-img {
+    margin-left: 6%;
   }
+
+  .seta-icon {
+    top: 423%;
+    left: 35%;
+    max-width: 20%;
+  }
+
+  .seja-escola {
+    margin-left: 2%;
+  }
+
+
 }
